@@ -22,6 +22,17 @@
                     </h1>
                 </div>
             </div>
+            <h6 class="my-3">
+                <span class="text-light">@ViewBag.Runtime • </span>
+                <span class="text-light">@ViewBag.Genre •</span>
+                <span class="text-light">@ViewBag.Released</span>
+            </h6>
+            <h5>
+                @foreach (var language in ViewBag.Languages)
+                {
+                    <span class="badge bg-light text-dark my-3 me-2">@language</span>
+                }
+            </h5>
         </div>
     </div>
 </div>

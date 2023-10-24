@@ -142,7 +142,7 @@ namespace MovieTicketBooking.Controllers
         {
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("http://www.omdbapi.com/?i=tt3896198&apikey=56b876a&" + title + "&y=" + releaseYear))
+                using (var response = await httpClient.GetAsync("http://www.omdbapi.com/?apikey=56b876a&t=" + title + "&y=" + releaseYear))
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     return JsonConvert.DeserializeObject<dynamic>(apiResponse);
