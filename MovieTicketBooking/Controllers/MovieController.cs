@@ -144,35 +144,12 @@ namespace MovieTicketBooking.Controllers
 
             ViewBag.Title = movieDetails["Title"];
             ViewBag.Year = movieDetails["Year"];
-            ViewBag.Runtime = movieDetails["Runtime"];
+            // ViewBag.Runtime = movieDetails["Runtime"];
             ViewBag.Released = movieDetails["Released"];
             ViewBag.Genre = movieDetails["Genre"];
 
             string[] languages = movieDetails["Language"].ToString().Split(',');
             ViewBag.Languages = languages;
-
-            Dictionary<string, string> ratings = new Dictionary<string, string>();
-            foreach (var item in movieDetails["Ratings"])
-            {
-                ratings.Add(item["Source"].ToString(), item["Value"].ToString());
-            }
-            ViewBag.Ratings = ratings;
-
-            List<string> actors = new List<string>();
-            foreach (var item in movieDetails["Actors"].ToString().Split(','))
-            {
-                actors.Add(item);
-            }
-            ViewBag.Actors = actors;
-
-            ViewBag.Director = movieDetails["Director"];
-
-            List<string> writers = new List<string>();
-            foreach (var item in movieDetails["Writer"].ToString().Split(','))
-            {
-                writers.Add(item);
-            }
-            ViewBag.Writers = writers;
 
             ViewBag.Plot = movieDetails["Plot"];
 
