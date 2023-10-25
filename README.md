@@ -47,12 +47,6 @@ dotnet ef database update
 
 2. Seed the database with initial data (e.g., movie listings, theaters, etc.).
 
-## Running the Application
-1. Build and run the application:
-dotnet build
-dotnet run
-2. Open a web browser and go to `http://localhost:5000` to access the application.
-
 ## Features
 - User Registration and Authentication
 - Browse Movie Listings
